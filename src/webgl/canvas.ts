@@ -21,11 +21,12 @@ export class Canvas extends MyDisplay {
         let renderParam:any = {
             canvas : this.el,
             antialias: false,
+            preserveDrawingBuffer : true,
             powerPreference : 'low-power',
         }
         this.renderer = new WebGLRenderer(renderParam)
         this.renderer.autoClear = true
-        this.renderer.setClearColor(0x000000, 1)
+        this.renderer.setClearColor(0xffffff, 1)
 
         this.mainScene = new Scene()
 
